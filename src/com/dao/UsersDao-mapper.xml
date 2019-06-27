@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace：接口的全类名-->
+<mapper namespace="com.dao.UsersDao">
+    <select id="getUserList" resultType="com.entity.Users">
+        select * from users
+    </select>
+    <select id="getUsersByID" resultType="com.entity.Users">
+        select * from users where id = #{id}
+    </select>
+    <select id="getUserByNamePwd" resultType="com.entity.Users">
+        select * from users where name = #{name} and pwd = #{pwd}
+    </select>
+</mapper>
